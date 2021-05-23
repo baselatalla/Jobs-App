@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('head')%>
+
+<body>
+    
+    <%- include('header')%>
+
+
+
+    <main>
+
+        <div class="cardHolder">
+            <% data.forEach((ele)=>{%> 
+             <div class="card">
+                 <h2> Title: <%=ele.title%></h2>
+                 <h2> Company: <%=ele.company%></h2>
+                 <h2> Location: <%=ele.location%></h2>
+                 <h2> url: <%=ele.url%></h2>
+
+                 
+                 <form action="/add" method="POST">
+                    <input type="hidden" name="title" id="title" value="<%=ele.title%>">
+                    <input type="hidden" name="company" id="company" value="<%=ele.company%>">
+                    <input type="hidden" name="location" id="location" value="<%=ele.location%>">
+                    <input type="hidden" name="url" id="url" value="<%=ele.url%>">
+                    <input type="hidden" name="description" id="description" value="<%=ele.description%>">
+
+                <input type="submit" value="Add to MyList">
+                </form>
+             </div>
+             <%})%>
+         </div>
+
+
+    </main>
+</body>
+</html>

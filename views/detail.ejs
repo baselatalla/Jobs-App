@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('head')%>
+
+<body>
+    <%- include('header')%>
+
+    <main>
+      <h1> Details </h1>
+
+      <div class="cardHolder">
+        <% data.forEach((ele)=>{%> 
+         <div class="card">
+             <h2> Title: <%=ele.title%></h2>
+             <h2> Company: <%=ele.company%></h2>
+             <h2> Location: <%=ele.location%></h2>
+             <h2> url: <%=ele.url%></h2>
+             <h2> Description: <br> <%=ele.description%></h2>
+
+             <button id="updatebtn">Update</button>
+             <form action="/update/<%=ele.id%>?_method=put" method="POST">
+                <input type="text" name="title" id="title" value="<%=ele.title%>">
+                <input type="text" name="company" id="company" value="<%=ele.company%>">
+                <input type="text" name="location" id="location" value="<%=ele.location%>">
+                <input type="text" name="url" id="url" value="<%=ele.url%>">
+                <input type="text" name="description" id="description" value="<%=ele.description%>">
+            <input type="submit" value="Update">
+            </form>
+            <form action="/delete/<%=ele.id%>?_method=delete" method="POST">
+            <input type="submit" value="delete">
+            </form>
+         </div>
+         <%})%>
+     </div>
+
+    </main>
+    
+</body>
+</html>

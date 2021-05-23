@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <%- include('head')%>
+
+<body>
+
+    <%- include('header')%>
+
+    <main>
+        <h1>All Jobs in USA</h1>
+
+        <div class="cardHolder">
+           <% data.forEach((ele)=>{%> 
+            <div class="card">
+                <h2> Title: <%=ele.title%></h2>
+                <h2> Company: <%=ele.company%></h2>
+                <h2> Location: <%=ele.location%></h2>
+                <h2> url: <%=ele.url%></h2>
+                
+            </div>
+            <%})%>
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
