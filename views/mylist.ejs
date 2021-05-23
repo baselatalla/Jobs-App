@@ -17,7 +17,7 @@
                  <h2> Title: <%=ele.title%></h2>
                  <h2> Company: <%=ele.company%></h2>
                  <h2> Location: <%=ele.location%></h2>
-                 <h2> url: <%=ele.url%></h2>
+                 <h2> url: <a href="<%=ele.url%>"><%=ele.url%></a></h2>
 
                  <form action="/detail/<%=ele.id%>" method="GET">
                 <input type="submit" value="View Detail">

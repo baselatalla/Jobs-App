@@ -10,15 +10,15 @@
 
       <div class="cardHolder">
         <% data.forEach((ele)=>{%> 
-         <div class="card">
+         <div class="carddetail">
              <h2> Title: <%=ele.title%></h2>
              <h2> Company: <%=ele.company%></h2>
              <h2> Location: <%=ele.location%></h2>
-             <h2> url: <%=ele.url%></h2>
+             <h2> url: <a href="<%=ele.url%>"><%=ele.url%></a></h2>
              <h2> Description: <br> <%=ele.description%></h2>
 
              <button id="updatebtn">Update</button>
-             <form action="/update/<%=ele.id%>?_method=put" method="POST">
+             <form id="fooorrrmm" action="/update/<%=ele.id%>?_method=put" method="POST">
                 <input type="text" name="title" id="title" value="<%=ele.title%>">
                 <input type="text" name="company" id="company" value="<%=ele.company%>">
                 <input type="text" name="location" id="location" value="<%=ele.location%>">
@@ -34,6 +34,9 @@
      </div>
 
     </main>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/app.js"></script>
     
 </body>
 </html>

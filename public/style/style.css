@@ -72,3 +72,66 @@
     background-color:#697762;
     border: none;
   }
+
+  .cardHolder{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+  }
+  .card{
+      width:45%;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #697762;
+      border-radius: 25px;
+      margin-bottom: 40px;
+      margin-top: 40px;
+  }
+  .carddetail{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #697762;
+    border-radius: 25px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+  .card h2{
+   width: 100%;
+   padding: 5px;
+
+  }
+  h1{
+      text-align: center;
+      font-size: xx-large;
+      color: #697762;
+  }
+
+  #searchhh{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 150px;
+      border:1px solid #699862;
+      padding: 10px;
+      background-color: #c9e4bb;
+  }
+
+  form{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 20px;
+  }
+input{
+    margin: 8px;
+ width: 95%;
+ color: #699862;
+ padding: 10px;
+}
